@@ -52,13 +52,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         phMarker.position(pathankot);
         googleMap.addMarker(phMarker);
         GPSTracker gps = new GPSTracker(MainActivity.this);
-
-        Double srcLatitude = gps.getLatitude();
-        Double srclongitude = gps.getLongitude();
-        SystemClock.sleep(1000);
-        Double destlatitude = gps.getLatitude() + 100;
-        Double destlongitude = gps.getLongitude() + 100;
-
+        
         Polyline line = googleMap.addPolyline(new PolylineOptions()
                 .add(chandigarh,pathankot)
                 .width(5)
